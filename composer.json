@@ -1,0 +1,19 @@
+{
+    "name": "sahil-gulati/apibase",
+    "description": "Utility for creating light weight API's",
+    "authors": [
+        {
+            "name": "Sahil Gulati",
+            "email": "sahil.gulati1991@outlook.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+       "php": ">=5.4"
+    },
+    "autoload":{
+       "psr-0":{
+          "APIBase": "src/"
+       }
+    }
+}
