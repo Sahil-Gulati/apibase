@@ -2,10 +2,10 @@
 Utility for creating light weight API's
 
 
-### usage
-composer require sahil-gulati/apibase
+### Installation
+> composer require sahil-gulati/apibase
 
-#### example
+#### Example
 ```php
 
 <?php
@@ -17,10 +17,14 @@ APIBase\URL\Router::registerRoutes("/api/v1", array(
     array(
         METHOD => "GET",
         ROUTE => "/payments",
-        HANDLER => array("X", "a")
+        HANDLER => "helloWorld"
     )
 ));
 
 # Process request
 APIBase\URL\Invoker::processRequest();
+
+function helloWorld(){
+    echo json_encode(array("message" => "Hello from sahil!"));
+}
 ```
