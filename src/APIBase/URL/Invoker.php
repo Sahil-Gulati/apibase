@@ -18,7 +18,7 @@ class Invoker {
     
     public function validateRequest() {
         $method = $_SERVER["REQUEST_METHOD"];
-        $uri = $_SERVER["SCRIPT_URI"];
+        $uri = $_SERVER["REQUEST_URI"];
         if(!isset(\APIBase\URL\Router::$ROUTES[$uri])){
             throw new \APIBase\Exceptions\HTTPException("File not found!", 404);
         } if(!isset(\APIBase\URL\Router::$ROUTES[$uri][$method])){
@@ -30,7 +30,7 @@ class Invoker {
     }
     public function invoke() {
         $method = $_SERVER["REQUEST_METHOD"];
-        $uri = $_SERVER["SCRIPT_URI"];
+        $uri = $_SERVER["REQUEST_URI"];
         call_user_func(\APIBase\URL\Router::$ROUTES[$uri][$method]);
     }
 }

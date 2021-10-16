@@ -40,6 +40,5 @@ class Parameters {
         self::$GETVARS=array_merge(self::$GETVARS,$_GET);
         self::$POSTVARS=$_POST;
         self::$FILEVARS=$_FILES;
-        self::$COOKIEVARS=$_COOKIE;
     }
 }
