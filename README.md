@@ -28,3 +28,6 @@ function helloWorld(){
     echo json_encode(array("message" => "Hello from sahil!"));
 }
 ```
+#### Test
+
+[localhost:80/api/v1/payments](http://localhost:80/api/v1/payments)
